@@ -1,10 +1,12 @@
  /* ==UserStyle==
 @name         Dark Theme for Portal de Legislação do Planalto and Diario Oficial da União
 @version      20240509.01.54
-@namespace    userstyles.world/user/dyeffersonaz
+@namespace    userstyles.world/user/pho-souza
 @description  Tema escuro para o Portal de Legislação do Planalto e do Diário Oficial da União
+Tema baseado em: userstyles.world/user/dyeffersonaz
 
 EN: Dark theme for the Planalto Legislation Portal and the Official Diary of the Union.
+Based on userstyles.world/user/dyeffersonaz's theme.
 @author       pho-souza
 @license      No License
 ==/UserStyle== */
@@ -17,7 +19,7 @@ EN: Dark theme for the Planalto Legislation Portal and the Official Diary of the
 }
 
 
-@-moz-document url-prefix("https://www.planalto.gov.br/"), url-prefix("https://www.in.gov.br/en/web/dou/"), url-prefix("https://www.in.gov.br/web/dou/"), domain("planalto.gov.br") {
+@-moz-document url-prefix("https://www.in.gov.br/en/web/dou/"), url-prefix("https://www.in.gov.br/web/dou/"), domain("planalto.gov.br") {
     @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
@@ -142,12 +144,12 @@ EN: Dark theme for the Planalto Legislation Portal and the Official Diary of the
 	body{
 		/*margin-left: clamp(25px, 20vw, 1000px);
 		margin-right: clamp(25px, 20vw, 1000px);*/
-		padding-left: clamp(5px, 25vw, 1000px);
-		padding-right: clamp(5px, 25vw, 1000px);
+		padding-left: clamp(5px, 10vw, 1000px);
+		padding-right: clamp(5px, 10vw, 1000px);
 		
 		@media (max-width: 1280px) {
-		  padding-left: 2.5%;
-			padding-right: 2.5%;
+		  padding-left: 25%;
+		  max-width: 1220px;
 }
 	}
 	
