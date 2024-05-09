@@ -1,0 +1,136 @@
+ /* ==UserStyle==
+@name         Dark Theme for Portal de Legislação do Planalto and Diario Oficial da União
+@version      20240509.01.54
+@namespace    userstyles.world/user/dyeffersonaz
+@description  Tema escuro para o Portal de Legislação do Planalto e do Diário Oficial da União
+
+EN: Dark theme for the Planalto Legislation Portal and the Official Diary of the Union.
+@author       pho-souza
+@license      No License
+==/UserStyle== */
+
+:root {
+    --font_size: 10pt;
+	--bigger_font_size: 14pt;
+    --main_font: "Literata", "Libre Baskerville", serif;
+    --sans_serif_font: "Noto Sans", "Arial", sans-serif;
+}
+
+
+@-moz-document url-prefix("https://www.planalto.gov.br/"), url-prefix("https://www.in.gov.br/en/web/dou/"), url-prefix("https://www.in.gov.br/web/dou/"), domain("planalto.gov.br") {
+    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+    
+    body{
+        background-color: #2f2f2f !important;
+        text-indent: 0 !important;
+    }
+	
+
+    p *, p > *, span *, span > *, font *{
+        background: none !important;
+        font-family: var(--main_font) !important;
+        color: #f1f1f1 !important;
+        text-indent: 0 !important;
+        font-size: var(--font_size);
+        /*margin: 4em;*/
+    }
+	
+	article * {
+		font-family: var(--main_font) !important;
+        color: #f1f1f1 !important;
+        text-indent: 0 !important;
+        font-size: var(--font_size);
+	}
+	
+	.ementa{
+		font-style: italic;
+	}
+    
+    table *{
+        font-family: var(--sans_serif_font) !important;
+        text-indent: 0 !important;
+        
+    }
+    
+    p * {
+        text-indent: 0 !important;
+    }
+    
+	/* I want to add a JS script adding class to paragraphs */
+	/*
+    .planalto_artigo {
+        margin: 0em;
+        text-indent: 0 !important;
+    }
+    
+    .planalto_inciso {
+        margin: 2em;
+        text-indent: 0 !important;
+    }
+    
+    .planalto_paragrafo {
+        margin: 2em;
+        text-indent: 0 !important;
+    }
+    
+    .planalto_inciso.planalto_paragrafo{
+        margin: 4em;
+        text-indent: 0 !important;
+    }
+    
+    .planalto_item {
+        margin: 6em;
+        text-indent: 0 !important;
+    }
+    
+    .planalto_alinea {
+        margin: 6em;
+        text-indent: 0 !important;
+    }*/
+	
+    
+    .fundo-logo-imprensa{
+        background: transparent !important;
+    }
+    
+    p:hover {
+        background-color: rgba(0,0,0,.3) !important;
+        
+    }
+    
+    a {
+        color: DodgerBlue !important;
+        text-underline-position: under;
+        text-indent: 0 !important;
+    }
+    
+    .grupo{
+        padding-left: 0.5em;
+        border-left: 1px solid black !important;
+		
+		/*border-radius: 0% 0% 0% 1em;*/
+    }
+    
+    .grupo:hover{
+        /*box-shadow: red 0 0 0px !important;*/
+        border-left: 1px solid red !important;
+		background-color: rgba(0,0,0,.3) !important;
+    }
+    
+    .artigo:hover{
+        border-left: 1px solid orange !important;
+    }
+    
+    *[align="CENTER"] *, *[align="CENTER"] *, *[align="Center"] *{
+        /*font-family: var(--sans_serif_font) !important;*/
+		font-family: var(--sans_serif_font) !important;
+        font-size: var(--bigger_font_size) !important;
+        text-indent: 0 !important;
+    }
+	
+    /*strike::before{
+         content: "VETADO ->";
+    }*/
+}
