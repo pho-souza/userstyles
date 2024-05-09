@@ -24,8 +24,11 @@ EN: Dark theme for the Planalto Legislation Portal and the Official Diary of the
     
     body{
         background-color: #2f2f2f !important;
-        text-indent: 0 !important;
     }
+	
+	body *{ 
+		 text-indent: 0 !important;
+	}
 	
 
     p *, p > *, span *, span > *, font *{
@@ -133,4 +136,20 @@ EN: Dark theme for the Planalto Legislation Portal and the Official Diary of the
     /*strike::before{
          content: "VETADO ->";
     }*/
+}
+
+@-moz-document domain("planalto.gov.br") {
+	body{
+		/*margin-left: clamp(25px, 20vw, 1000px);
+		margin-right: clamp(25px, 20vw, 1000px);*/
+		padding-left: clamp(5px, 25vw, 1000px);
+		padding-right: clamp(5px, 25vw, 1000px);
+		
+		@media (max-width: 1280px) {
+		  padding-left: 2.5%;
+			padding-right: 2.5%;
+}
+	}
+	
+	
 }
