@@ -30,6 +30,7 @@ Based on userstyles.world/user/dyeffersonaz's theme.
 	
 	body *{ 
 		 text-indent: 0 !important;
+        color: #f1f1f1 !important;
 	}
 	
 
@@ -38,8 +39,7 @@ Based on userstyles.world/user/dyeffersonaz's theme.
         font-family: var(--main_font) !important;
         color: #f1f1f1 !important;
         text-indent: 0 !important;
-        font-size: var(--font_size);
-        /*margin: 4em;*/
+        font-size: var(--font_size) !important;
     }
 	
 	article * {
@@ -49,8 +49,12 @@ Based on userstyles.world/user/dyeffersonaz's theme.
         font-size: var(--font_size);
 	}
 	
-	.ementa{
-		font-style: italic;
+	.ementa *{
+		font-family: var(--main_font) !important;
+        color: #f1f1f1 !important;
+        
+        text-indent: 0 !important;
+        font-size: var(--font_size) !important;
 	}
     
     table *{
@@ -61,10 +65,12 @@ Based on userstyles.world/user/dyeffersonaz's theme.
     
     p * {
         text-indent: 0 !important;
+        /*margin-bottom: 0px !important;
+        margin-top: 0px !important;*/
     }
     
 	/* I want to add a JS script adding class to paragraphs */
-	/*
+
     .planalto_artigo {
         margin: 0em;
         text-indent: 0 !important;
@@ -93,40 +99,79 @@ Based on userstyles.world/user/dyeffersonaz's theme.
     .planalto_alinea {
         margin: 6em;
         text-indent: 0 !important;
-    }*/
+    }
 	
     
     .fundo-logo-imprensa{
         background: transparent !important;
     }
     
-    p:hover {
+    p:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover {
         background-color: rgba(0,0,0,.3) !important;
         
     }
     
-    a {
+    a[href], a[href] * {
         color: DodgerBlue !important;
         text-underline-position: under;
         text-indent: 0 !important;
     }
     
+    table {
+        background-color:#2f2f2f !important;
+        border-color: #f1f1f1 !important;
+        color: #f1f1f1 !important;
+    }
+    
+    table *  {
+        background: none !important;
+        color: #f1f1f1 !important;
+        font-size: var(--font_size) !important;
+        font-family: var(--main_font) !important;
+        /*background: #2f2f2f !important;*/
+        border-color: #f1f1f1 !important;
+        
+    }
+    
+    
+    .grupo > p {
+        margin-bottom: 10pt !important;
+    }
+    
+    
     .grupo{
         padding-left: 0.5em;
-        border-left: 1px solid black !important;
+        border-left: 3px solid black !important;
 		
 		/*border-radius: 0% 0% 0% 1em;*/
     }
     
     .grupo:hover{
         /*box-shadow: red 0 0 0px !important;*/
-        border-left: 1px solid red !important;
+        border-color: orange;
 		background-color: rgba(0,0,0,.3) !important;
     }
     
     .artigo:hover{
-        border-left: 1px solid orange !important;
+        border-color: orangered !important;
     }
+    
+    .paragrafo:hover, .inciso:hover{
+        border-color: orange !important;
+    }
+    
+    .paragrafo:hover > .inciso:hover, .artigo > .inciso > .item:hover{
+        border-color: greenyellow !important;
+    }
+    
+    .paragrafo:hover > .inciso:hover .item:hover, .artigo > .inciso > .item:hover > .alinea:hover{
+        border-color: lightgreen !important;
+    }
+    
+    /*.identifica{
+        color: cyan !important;
+        font-size: 16pt !important;
+    }*/
     
     *[align="CENTER"] *, *[align="CENTER"] *, *[align="Center"] *{
         /*font-family: var(--sans_serif_font) !important;*/
@@ -144,11 +189,12 @@ Based on userstyles.world/user/dyeffersonaz's theme.
 	body{
 		/*margin-left: clamp(25px, 20vw, 1000px);
 		margin-right: clamp(25px, 20vw, 1000px);*/
-		padding-left: clamp(5px, 10vw, 1000px);
-		padding-right: clamp(5px, 10vw, 1000px);
+		padding-left: clamp(5px, 25vw, 25%);
+		padding-right: clamp(5px, 25vw, 1000px);
 		
-		@media (max-width: 1280px) {
-		  padding-left: 25%;
+		@media (max-width: 1220px) {
+            padding-left: 2.5%;
+            padding-right: 2.5%;
 		  max-width: 1220px;
 }
 	}
